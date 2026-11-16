@@ -1,0 +1,9 @@
+project: savantenvs/libplctag
+target: fuzz_tag_name
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tag_name/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tag_name
+    libfuzzer: true
+    timeout: 10
